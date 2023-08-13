@@ -21,11 +21,11 @@ class _NewsApiService implements NewsApiService {
   String? baseUrl;
 
   @override
-  Future<HttpResponse<List<ArticleModel>>> getNewsArticles(
+  Future<HttpResponse<List<ArticleModel>>> getNewsArticles({
     String? apiKey,
     String? country,
     String? category,
-  ) async {
+  }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'apiKey': apiKey,
